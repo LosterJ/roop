@@ -199,11 +199,13 @@ def start() -> None:
         update_status('Processing to video failed!')
 
 
-def destroy() -> None:
+def destroyNotCall() -> None:
     if roop.globals.target_path:
         clean_temp(roop.globals.target_path)
     sys.exit()
-
+    
+def destroy():
+    return None
 
 def run() -> None:
     parse_args()
